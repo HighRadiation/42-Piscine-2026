@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush00.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/28 03:40:06 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/06/28 03:44:10 by buoksuz          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putchar(char c);
+
+void	rush(int x, int y)
+{
+	int	col;
+	int	row;
+
+	col = 1;
+	row = 1;
+	while (col <= y)
+	{
+		row = 1;
+		while (row <= x)
+		{
+			if ((row == 1 || row == x) && (col == 1 || col == y))
+				ft_putchar('o');
+			else if (row == 1 || row == x)
+				ft_putchar('|');
+			else if (col == 1 || col == y)
+				ft_putchar('-');
+			else
+				ft_putchar(' ');
+			row++;
+		}
+		ft_putchar('\n');
+		col++;
+	}
+}
