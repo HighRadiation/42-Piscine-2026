@@ -6,13 +6,13 @@
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/28 03:40:11 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/06/28 14:43:26 by buoksuz          ###   ########.fr       */
+/*   Updated: 2026/07/01 08:26:28 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	rush(int x, int y)
+void	rush(int x, int y)  // 5 5
 {
 	int	col;
 	int	row;
