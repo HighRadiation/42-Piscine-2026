@@ -1,26 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/05 14:49:22 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/07 16:49:41 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/07 17:34:18 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+#include <string.h>
+
+char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
-	int	temp;
+	size_t	i;
 
 	i = 0;
-	while (i < size / 2)
+	while (src[i])
 	{
-		temp = tab[i];
-		tab[i] = tab[size - 1 - i];
-		tab[size - 1 - i] = temp;
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+#include <unistd.h>
+#include <stdlib.h>
+
+int main()
+{
+	char	*src;
+	char	*dest;
+	int		i;
+
+	i = 0;
+	dest = malloc(3);
+	src = "selam";
+	ft_strcpy(dest, src);
+	while (dest[i])
+	{
+		write(1, &dest[i], 1);
 		i++;
 	}
 }
