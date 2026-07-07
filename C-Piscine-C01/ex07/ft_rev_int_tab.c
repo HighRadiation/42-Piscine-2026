@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/04 00:36:42 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/04 14:33:45 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/05 14:49:22 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/07 15:37:22 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	*********nbr = 42;
+	int i;
+	int temp;
+
+	i = 0;
+	while (i < size / 2)
+	{
+		temp = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = temp;
+		i++;
+	}
 }

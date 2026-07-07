@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/04 00:36:42 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/04 14:33:45 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/04 13:38:43 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/04 14:36:00 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*********nbr = 42;
+	int	div;
+	int	mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
 }
