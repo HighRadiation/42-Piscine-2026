@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/08 13:58:56 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/08 14:06:42 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	size_t	i;
 
 	i = 0;
-	while (src[i])
+	while (i < n && src[i])
 	{
 		dest[i] = src[i];
 		i++;

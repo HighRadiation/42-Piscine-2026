@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/08 15:07:01 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/08 15:20:05 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_numeric(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i])
+	if (str[i] == '\0')
+		return (1);
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] >= 48 && str[i] <= 57)
+			i++;
+		else
+			return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

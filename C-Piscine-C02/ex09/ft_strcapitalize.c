@@ -6,18 +6,18 @@
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 18:51:56 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 19:06:21 by buoksuz          ###   ########.fr       */
+/*   Updated: 2026/07/09 16:53:48 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	is_alpha(char c)
+int	is_alpha(char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
 
-static	int	is_digit(char c)
+int	is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
@@ -31,7 +31,7 @@ char	*ft_strcapitalize(char *str)
 
 	i = 0;
 	n_word = 1;
-	while(str[i])
+	while (str[i])
 	{
 		if (is_alpha(str[i]))
 		{
@@ -48,12 +48,4 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char str[] = "hi, how are you? 42words forty-two; fifty+and+one";
-	printf("%s\n", ft_strcapitalize(str));
 }

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/08 14:07:45 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/08 15:09:12 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i])
+	if (str[i] == '\0')
+		return (1);
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
+			i++;
+		else
+			return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

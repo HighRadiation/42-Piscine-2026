@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/10 19:00:41 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/10 19:03:13 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcpy(char *dest, char *src)
+unsigned int	ft_strlcpy(char *dest, char *str, unsigned int size)
 {
-	size_t	i;
+	int i;
 
 	i = 0;
-	while (src[i])
+	while (size < i && str[i])
 	{
-		dest[i] = src[i];
+		dest[i] = str[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (size);
 }

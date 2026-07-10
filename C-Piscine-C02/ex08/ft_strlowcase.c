@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/08 17:37:48 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/08 17:43:43 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strlowcase(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }

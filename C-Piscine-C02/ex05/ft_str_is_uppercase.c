@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 17:17:23 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/08 13:58:31 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/08 15:19:14 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/08 15:21:41 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_uppercase(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i])
+	if (str[i] == '\0')
+		return (1);
+	while (str[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if (str[i] >= 65 && str[i] <= 90)
+			i++;
+		else
+			return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
