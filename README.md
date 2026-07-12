@@ -42,16 +42,6 @@ Hafta sonu yapılan ilk takım projesidir. 42'nin sistemi tarafından rastgele o
 
 Tüm C dosyaları 42 Norm kurallarına uygun yazılır. Uygunluk `norminette` aracıyla kontrol edilir.
 
-## Derleme
-
-Her proje kendi `Makefile`'ına sahiptir:
-
-\`\`\`bash
-make
-\`\`\`
-
-Makefile kuralları şunları sağlar: gereksiz yeniden derleme yapılmaz, link hataları önlenir, \`clean\` ve \`fclean\` ile derleme çıktıları temizlenir.
-
 ## Kullanım Uyarısı
 
 Bu depo kişisel çözümleri içerir. Kodun doğrudan kopyalanması öğrenme sürecine zarar verir. İçerik yalnızca referans amaçlı kullanılmalıdır.
