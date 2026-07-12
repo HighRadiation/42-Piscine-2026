@@ -58,4 +58,4 @@ Bu depo kişisel çözümleri içerir. Kodun doğrudan kopyalanması öğrenme s
 
 ## Lisans
 
-E�itim amaçlıdır. 42 School'un fikri mülkiyet kurallarına tabidir.
+Eğitim amaçlıdır. 42 School'un fikri mülkiyet kurallarına tabidir.
