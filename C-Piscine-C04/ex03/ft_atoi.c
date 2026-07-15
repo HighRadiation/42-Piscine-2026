@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buoksuz@student.42istanbul.com.tr          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/11 12:03:58 by buoksuz           #+#    #+#             */
-/*   Updated: 2026/07/13 08:47:35 by buoksuz          ###   ########.fr       */
+/*   Created: 2026/07/13 08:47:56 by buoksuz           #+#    #+#             */
+/*   Updated: 2026/07/13 08:51:12 by buoksuz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
+	int	sign;
+	int	result;
 
 	i = 0;
-	while (str[i] != '\0')
+	sign = 1;
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	d_length;
-	unsigned int	i;
-
-	d_length = ft_strlen(dest);
-	i = 0;
-	if (size <= d_length)
-		return (size + ft_strlen(src));
-	while (src[i] != '\0' && d_length + i + 1 < size)
+	while (str[i] == '+' || str[i] == '-')
 	{
-		dest[d_length + i] = src[i];
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	dest[d_length + i] = '\0';
-	return (d_length + ft_strlen(src));
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] + '0');
+		i++;
+	}
+	return(result * sign);
 }
-
