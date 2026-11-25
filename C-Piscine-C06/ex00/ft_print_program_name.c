@@ -31,9 +31,3 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
-
-// ft_strlen uzunluk hesaplar.
-// argv[0] program adını tutar.
-// write ile ekrana yazılır.
-// Ardından yeni satır yazılır.
-// Sadece write kullanılır.

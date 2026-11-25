@@ -35,9 +35,3 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
-
-// i, argv[1]'den başlar.
-// Döngü argc'ye kadar sürer.
-// Her argüman write ile yazılır.
-// Ardından yeni satır eklenir.
-// argv[0] atlanır.
